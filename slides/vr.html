@@ -12,6 +12,13 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <style type="text/css">
+      .reveal img.blended {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    </style>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -41,24 +48,26 @@
         </section>
         <section>
           <section>
-            Let's see if you know some shapes
+            <p>Let's start from the basics...</p>
+            <p class="fragment">do you know these shapes?</p>
           </section>
           <section>
-            img of triangle
+            <img class="blended" src="img/p1_triangle.png">
           </section>
           <section>
-            img of rectangle
+            <img class="blended" src="img/p2_square.png">
           </section>
           <section>
-            img of pentagon
+            <img class="blended" src="img/p3_pentagon.png">
           </section>
           <section>
-            img of hexagon
+            <img class="blended" src="img/p4_hexagon.png">
           </section>
           <section>
             <p>These are all "2D" shapes</p>
             <p class="fragment">Hold on, what does 2D mean?</p>
             <p class="fragment">two-dimensional: width and height</p>
+            <p class="fragment">they are "flat" shapes</p>
           </section>
         </section>
         <section>
@@ -68,28 +77,28 @@
             <h2>3D</h2>
           </section>
           <section>
-            <p>3D means: three-dimentional</p>
+            <p>3D means: three-dimensional</p>
             <p class="fragment">width, height AND depth</p>
           </section>
         </section>
         <section>
           <section>
-            Let's see if we recognise some 3D shapes
+            Let's see if you recognise some 3D shapes
           </section>
           <section>
-            img of pyramid
+            <img src="img/3d_piramid.png">
           </section>
           <section>
-            img of cone
+            <img src="img/3d_cone.png">
           </section>
           <section>
-            img of cube
+            <img src="img/3d_cube.png">
           </section>
           <section>
-            img of cylinder
+            <img src="img/3d_cylinder.png">
           </section>
           <section>
-            img of sphere
+            <img src="img/3d_sphere.png">
           </section>
           <section>
             <p>now the fun bit...</p>
@@ -108,6 +117,71 @@
           <section>
             <p>let's see how it looks</p>
             <iframe data-src="../VR/01/index.html" width="600" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+          </section>
+          <section>
+            <pre><code class="hljs" data-trim contenteditable>
+<a-scene>
+  <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9">
+  </a-box>
+
+  <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
+  </a-sphere>
+
+  <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D">
+  </a-cylinder>
+
+  <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4">
+  </a-plane>
+
+  <a-sky color="#ECECEC">
+  </a-sky>
+</a-scene>
+            </code></pre>
+          </section>
+          <section>
+            <p>we can do something more complex</p>
+            <iframe data-src="../VR/02/index.html" width="600" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+          </section>
+          <section>
+            <p>we can use <a href="https://ephtracy.github.io/">tools</a> to create our worlds (a bit like minecraft)</p>
+            <img src="img/magicavoxel.png">
+          </section>
+          <section>
+            <p>and we can add interactions (a lot like minecraft!)</p>
+            <iframe data-src="https://aframe-aincraft.glitch.me/" width="600" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <p>how do we enter these virtual worlds?</p>
+          </section>
+          <section>
+            <p>we can trick our mind that depth is real by using...</p>
+            <p class="fragment">Stereoscopy!</p>
+          </section>
+          <section>
+            Stereoscopy is a technique for creating or enhancing the illusion of depth in an image - <a href="https://en.wikipedia.org/wiki/Stereoscopy">wikipedia</a>
+          </section>
+          <section>
+            <p>Most stereoscopic methods present two offset images separately to the left and right eye of the viewer.
+            </p>
+            <p>These two-dimensional images are then combined in the brain to give the perception of 3D depth.
+            </p>
+          </section>
+          <section data-background="img/cardboard.jpg">
+            <p>to make stereoscopy</p>
+            <p>on our phones</p>
+            <p>we can use</p>
+            <p>a piece of carboard</p>
+            <p>and 2 lenses</p>
+          </section>
+          <section>
+            <p>you can make your own</p>
+            <img src="img/cardboard_parts.jpg">
+            <p>or buy them already made</p>
+          </section>
+          <section data-background="img/cardboard_demo.jpg">
+            Demo time!
           </section>
         </section>
 			</div>

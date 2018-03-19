@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>playing with JS</title>
+  <script type="text/javascript">
+    let audioCtx = new (AudioContext || webkitAudioContext)();
+    let osc = audioCtx.createOscillator();
+    osc.frequency.value = 440;
+    osc.type = 'triangle';
+    osc.start(0);
+
+    function playSound() {
+      console.log('playing');
+      osc.connect(audioCtx.destination);
+      window.setTimeout(function() {
+        osc.disconnect();
+      }, 2000);
+    }
+  </script>
+  <style type="text/css">
+    body {
+      font-size: 1.5rem;
+      font-family: Helvetica, sans-serif;
+      background: #ccc;
+    }
+    button {
+      padding: 1rem;
+      font-size: 1.5rem;
+      margin: 0 0.5rem 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="keyboard">
+    <button onclick="playSound()">play sound</button>
+  </div>
+</body>
+</html>

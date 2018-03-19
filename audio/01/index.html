@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>playing with JS</title>
+  <script type="text/javascript">
+    (function() {
+      function key(letter) {
+        let button = document.createElement('button');
+        button.innerHTML = 'key: ' + letter;
+        button.onclick = function() {
+          let log = document.createElement('p');
+          log.innerHTML = "clicked: " + letter;
+          let logs = document.getElementById('logs');
+          logs.insertBefore(log, logs.firstChild);
+        }
+        return button;
+      }
+
+      function createKeyboard(containerId) {
+        let keys = 'qwerty';
+        let container = document.getElementById(containerId);
+        for (let i in keys) {
+          container.appendChild(key(keys[i]));
+        }
+      }
+
+      window.addEventListener('load', function() {
+          createKeyboard('keyboard');
+      });
+    })();
+  </script>
+  <style type="text/css">
+    body {
+      font-size: 1.5rem;
+      font-family: Helvetica, sans-serif;
+      background: #ccc;
+    }
+    button {
+      padding: 1rem;
+      font-size: 1.5rem;
+      margin: 0 0.5rem 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="keyboard"></div>
+  <div id="logs"></div>
+</body>
+</html>
